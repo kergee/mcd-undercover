@@ -131,11 +131,17 @@ async function post(url, body) {
   const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), signal: AbortSignal.timeout(95000) });
   const data = await response.json(); if (!response.ok) throw new Error(data.error || '请求失败'); return data;
 }
+const isLocalHost = ['localhost', '127.0.0.1', '::1', '[::1]'].includes(location.hostname);
 async function showSource() {
   if (state.game && state.game.phase !== 'result') return toast('先完成这一局，再更换菜单，避免中途换词');
-  openDialog(`<div class="eyebrow">MENU SUPPLY STATION</div><h2 id="dialog-title">换一本今天的菜单</h2><p>查询真实门店菜单，为下一局生成新词对。仅查询，不下单，也不读取你的订单历史。</p><div class="help-card"><b>本机连接麦当劳 MCP</b><p id="connection-state">正在检查本机连接…</p><div class="source-form"><input id="city" aria-label="城市" placeholder="城市，如上海" value="上海"><input id="keyword" aria-label="地点关键词" placeholder="地点关键词" value="人民广场"><button class="primary" id="search-stores">找门店</button></div></div><div class="source-status" id="source-status" role="status"></div><div id="store-list" class="store-list"></div><div class="source-divider">或者带上 WorkBuddy 准备的词库</div><input id="pack-file" type="file" accept="application/json,.json" hidden><button class="secondary" id="import-pack">导入菜单 JSON</button> <button class="button-link" id="use-demo">恢复示例菜单</button><p class="quiet">导入文件只在当前浏览器内使用；将标注为“导入菜单”，不冒充本机实时调用。Token 请配置在本机服务端，不要填写到网页。</p>`);
+  openDialog(`<div class="eyebrow">MENU SUPPLY STATION</div><h2 id="dialog-title">换一本今天的菜单</h2><p>查询真实门店菜单，为下一局生成新词对。仅查询，不下单，也不读取你的订单历史。</p><div class="help-card"><b>实时门店查询</b><p id="connection-state">正在检查连接…</p><div class="source-form"><input id="city" aria-label="城市" placeholder="城市，如上海" value="上海"><input id="keyword" aria-label="地点关键词" placeholder="地点关键词" value="人民广场"><button class="primary" id="search-stores">找门店</button></div></div><div class="source-status" id="source-status" role="status"></div><div id="store-list" class="store-list"></div><div class="source-divider">或者带上 WorkBuddy 准备的词库</div><input id="pack-file" type="file" accept="application/json,.json" hidden><button class="secondary" id="import-pack">导入菜单 JSON</button> <button class="button-link" id="use-demo">恢复示例菜单</button><p class="quiet">导入文件只在当前浏览器内使用；将标注为“导入菜单”，不冒充实时查询。Token 请配置在服务端，不要填写到网页。</p>`);
   try { const response = await fetch('/api/status'); const status = await response.json(); $('#connection-state').textContent = status.tokenConfigured ? '已配置 · 可以查找门店，Token 不会传给网页。' : '尚未配置。按项目说明启动本机服务并设置 Token，或先导入菜单文件。'; $('#search-stores').disabled = !status.tokenConfigured; }
-  catch { $('#connection-state').textContent = '当前是静态演示，请通过“启动游戏.cmd”开启本机服务；也可以导入菜单文件。'; $('#search-stores').disabled = true; }
+  catch {
+    const hint = $('#connection-state');
+    if (isLocalHost) hint.textContent = '本机服务没有响应，暂时查不了真实门店。可以先导入菜单包，或按项目说明启动本机服务。';
+    else hint.innerHTML = '线上版是静态演示：可以直接用示例词库开局，也可以导入菜单包，例如仓库中的 <a href="https://raw.githubusercontent.com/kergee/mcd-undercover/main/examples/real-menu-pack.json" target="_blank" rel="noopener">examples/real-menu-pack.json</a>（真实门店样例）。门店实时查询需要在本机运行本项目，MCP 凭证只保存在本机，不会放进网页。';
+    $('#search-stores').disabled = true;
+  }
   $('#search-stores').onclick = async () => {
     const button = $('#search-stores'); button.disabled = true; $('#source-status').textContent = '正在查询真实门店…'; $('#store-list').innerHTML = '';
     try {
