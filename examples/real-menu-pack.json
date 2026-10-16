@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "kind": "mcp-import",
+    "storeName": "麦当劳上海黄浦华旭国际大厦餐厅",
+    "fetchedAt": "2026-10-15T23:54:13.532Z",
+    "tools": [
+      "query-meals",
+      "list-nutrition-foods"
+    ]
+  },
+  "items": [
+    {
+      "id": "1088",
+      "name": "优品豆浆",
+      "category": "饮品"
+    },
+    {
+      "id": "1254",
+      "name": "火腿扒麦满分",
+      "category": "早餐",
+      "nutrition": {
+        "energyKcal": 261,
+        "protein": 14,
+        "fat": 12,
+        "carbohydrate": 24,
+        "sodium": 608
+      }
+    },
+    {
+      "id": "3010",
+      "name": "雪碧",
+      "category": "饮品"
+    },
+    {
+      "id": "3755",
+      "name": "纯牛奶(盒装)",
+      "category": "饮品"
+    },
+    {
+      "id": "4437",
+      "name": "玉米杯",
+      "category": "小食"
+    },
+    {
+      "id": "4825",
+      "name": "脆薯饼",
+      "category": "小食",
+      "nutrition": {
+        "energyKcal": 146,
+        "protein": 1,
+        "fat": 9,
+        "carbohydrate": 14,
+        "sodium": 311
+      }
+    },
+    {
+      "id": "4989",
+      "name": "双层原味板烧鸡腿麦满分",
+      "category": "早餐",
+      "nutrition": {
+        "energyKcal": 355,
+        "protein": 23,
+        "fat": 17,
+        "carbohydrate": 27,
+        "sodium": 984
+      }
+    },
+    {
+      "id": "5022",
+      "name": "猪柳蛋麦满分",
+      "category": "早餐",
+      "nutrition": {
+        "energyKcal": 387,
+        "protein": 23,
+        "fat": 21,
+        "carbohydrate": 25,
+        "sodium": 846
+      }
+    },
+    {
+      "id": "5024",
+      "name": "猪柳麦满分",
+      "category": "早餐",
+      "nutrition": {
+        "energyKcal": 308,
+        "protein": 16,
+        "fat": 16,
+        "carbohydrate": 24,
+        "sodium": 781
+      }
+    },
+    {
+      "id": "5888",
+      "name": "吉士蛋麦满分",
+      "category": "早餐"
+    },
+    {
+      "id": "5889",
+      "name": "大脆鸡扒麦满分",
+      "category": "早餐",
+      "nutrition": {
+        "energyKcal": 361,
+        "protein": 16,
+        "fat": 17,
+        "carbohydrate": 35,
+        "sodium": 804
+      }
+    },
+    {
+      "id": "6362",
+      "name": "100% 苹果汁(盒装)",
+      "category": "饮品"
+    },
+    {
+      "id": "6800",
+      "name": "原味板烧鸡腿麦满分",
+      "category": "早餐",
+      "nutrition": {
+        "energyKcal": 246,
+        "protein": 15,
+        "fat": 9,
+        "carbohydrate": 25,
+        "sodium": 611
+      }
+    },
+    {
+      "id": "502773",
+      "name": "猪柳炒双蛋堡",
+      "category": "汉堡",
+      "nutrition": {
+        "energyKcal": 437,
+        "protein": 25,
+        "fat": 24,
+        "carbohydrate": 29,
+        "sodium": 705
+      }
+    },
+    {
+      "id": "507328",
+      "name": "麦咖啡™热奶铁中杯",
+      "category": "饮品"
+    },
+    {
+      "id": "507368",
+      "name": "麦咖啡™热美式中杯",
+      "category": "饮品"
+    },
+    {
+      "id": "507387",
+      "name": "卡布奇诺",
+      "category": "饮品"
+    },
+    {
+      "id": "507389",
+      "name": "浓缩咖啡",
+      "category": "饮品",
+      "nutrition": {
+        "energyKcal": 13,
+        "protein": 1,
+        "fat": 0,
+        "carbohydrate": 2,
+        "sodium": 0
+      }
+    },
+    {
+      "id": "507394",
+      "name": "牛奶",
+      "category": "饮品"
+    },
+    {
+      "id": "507409",
+      "name": "麦咖啡™奶铁",
+      "category": "饮品"
+    },
+    {
+      "id": "507411",
+      "name": "麦咖啡™美式",
+      "category": "饮品"
+    },
+    {
+      "id": "510041",
+      "name": "冰牛奶中杯",
+      "category": "饮品",
+      "nutrition": {
+        "energyKcal": 224,
+        "protein": 13,
+        "fat": 11,
+        "carbohydrate": 19,
+        "sodium": 128
+      }
+    },
+    {
+      "id": "513112",
+      "name": "火腿扒早安营养卷",
+      "category": "早餐",
+      "nutrition": {
+        "energyKcal": 444,
+        "protein": 16,
+        "fat": 24,
+        "carbohydrate": 39,
+        "sodium": 1065
+      }
+    },
+    {
+      "id": "513113",
+      "name": "图林根香肠早安营养卷",
+      "category": "早餐",
+      "nutrition": {
+        "energyKcal": 425,
+        "protein": 14,
+        "fat": 23,
+        "carbohydrate": 38,
+        "sodium": 977
+      }
+    },
+    {
+      "id": "514700",
+      "name": "原味板烧鸡腿炒双蛋堡",
+      "category": "汉堡",
+      "nutrition": {
+        "energyKcal": 419,
+        "protein": 27,
+        "fat": 21,
+        "carbohydrate": 30,
+        "sodium": 715
+      }
+    },
+    {
+      "id": "520689",
+      "name": "鲜萃咖啡",
+      "category": "饮品"
+    },
+    {
+      "id": "520830",
+      "name": "双层猪柳蛋麦满分",
+      "category": "早餐",
+      "nutrition": {
+        "energyKcal": 513,
+        "protein": 29,
+        "fat": 32,
+        "carbohydrate": 26,
+        "sodium": 1210
+      }
+    },
+    {
+      "id": "521315",
+      "name": "芝芝火腿扒堡",
+      "category": "汉堡"
+    },
+    {
+      "id": "521929",
+      "name": "旋旋水手帽",
+      "category": "饮品"
+    },
+    {
+      "id": "521981",
+      "name": "巧克力味厚松饼猪柳蛋堡",
+      "category": "汉堡"
+    },
+    {
+      "id": "521982",
+      "name": "巧克力味厚松饼猪柳堡",
+      "category": "汉堡"
+    },
+    {
+      "id": "521989",
+      "name": "枫糖风味厚松饼猪柳蛋堡",
+      "category": "汉堡"
+    },
+    {
+      "id": "521990",
+      "name": "枫糖风味厚松饼猪柳堡",
+      "category": "汉堡"
+    },
+    {
+      "id": "9900008751",
+      "name": "可乐",
+      "category": "饮品"
+    },
+    {
+      "id": "9900008752",
+      "name": "派",
+      "category": "甜品"
+    }
+  ]
+}

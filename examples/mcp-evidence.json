@@ -1,0 +1,39 @@
+{
+  "endpoint": "https://mcp.mcd.cn",
+  "calls": [
+    {
+      "tool": "query-nearby-stores",
+      "at": "2026-10-15T23:46:00.047Z",
+      "success": true
+    },
+    {
+      "tool": "query-meals",
+      "at": "2026-10-15T23:48:32.347Z",
+      "success": true
+    },
+    {
+      "tool": "list-nutrition-foods",
+      "at": "2026-10-15T23:48:32.477Z",
+      "success": true
+    },
+    {
+      "tool": "query-nearby-stores",
+      "at": "2026-10-15T23:53:51.228Z",
+      "success": true
+    },
+    {
+      "tool": "query-meals",
+      "at": "2026-10-15T23:54:13.434Z",
+      "success": true
+    },
+    {
+      "tool": "list-nutrition-foods",
+      "at": "2026-10-15T23:54:13.532Z",
+      "success": true
+    }
+  ],
+  "itemCount": 35,
+  "nutritionMatched": 14,
+  "warning": "",
+  "status": "real-read-only-calls-completed"
+}

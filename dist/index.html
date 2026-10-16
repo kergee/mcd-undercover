@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#c52d36">
+  <meta name="description" content="麦麦谁是卧底：把今天的菜单，变成朋友之间的推理局。3～8人，一部手机就能玩。">
+  <title>麦麦谁是卧底 · 午休开一局</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23c52d36'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-size='40'%3E🍔%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳到游戏</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="./" aria-label="麦麦谁是卧底首页"><span class="brand-icon">?</span><span>麦麦<span class="brand-sub">谁是卧底</span></span></a>
+      <div class="edition">THE LUNCH BREAK CLUB<br><span>午休推理俱乐部 · 001</span></div>
+      <nav aria-label="主导航">
+        <button class="nav-item active" id="nav-game"><span>▦</span> 午休开一局 <i>01</i></button>
+        <button class="nav-item" id="nav-rules"><span>☷</span> 三分钟学会 <i>02</i></button>
+        <button class="nav-item" id="nav-source"><span>◈</span> 菜单补给站 <i>03</i></button>
+      </nav>
+      <div class="sidebar-note"><span class="tiny-star">✳</span><p>熟悉的是菜单，<br>猜不透的是朋友。</p><div class="mini-ticket">3–8 人 / 一部手机 / 随时开局</div></div>
+      <div class="sidebar-footer">独立开发的趣味作品<br>非麦当劳官方产品</div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span>GOOD FOOD. GREAT POKER FACE.</span><div><span class="source-dot"></span><button id="source-chip" class="text-button">示例菜单</button><span class="divider"></span><button id="sound-toggle" class="icon-button" aria-pressed="false" aria-label="开启音效">♫ 音效关</button></div></header>
+      <main id="main" tabindex="-1"></main>
+      <footer class="page-footer"><span>不用买一份餐，也能分享一桌快乐。</span><span>本地同机版 <b>v0.1</b></span></footer>
+    </div>
+  </div>
+  <dialog id="info-dialog" aria-labelledby="dialog-title"><button class="dialog-close" id="dialog-close" aria-label="关闭弹窗">×</button><div id="dialog-content"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "mcd-undercover",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "麦麦谁是卧底：用真实门店菜单开的午休推理局",
+  "engines": { "node": ">=20.11" },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test",
+    "mcp:tools": "node scripts/mcp-tools.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "license": "MIT"
+}
