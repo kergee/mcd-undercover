@@ -8,3 +8,4 @@ coverage/
 .workbuddy/
 .playwright-cli/
 /setup.yaml
+.wbapp_*.genie
